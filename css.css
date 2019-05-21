@@ -1,0 +1,32 @@
+body{
+    
+    font-family: monospace;
+    background-color: aquamarine;
+}
+button{
+    font-family: monospace;
+    outline: none;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    padding: 8px;
+    margin: 0px;
+}
+
+#passwordLength{
+    font-family: monospace;
+    background-color: whitesmoke;
+    width: 5ch;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 8px;]
+}
+
+#generatedPassword{
+    font-family: monospace;
+    font-size: 14pt;
+    background-color: whitesmoke;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+    display: none;
+}
