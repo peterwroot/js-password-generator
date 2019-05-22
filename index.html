@@ -9,24 +9,48 @@
             
             <h2>Simple JS Password Generator</h2>
             
+             <p>Easily generate a random password, up to 64 characters. Certain characters, such as lowercase 'l' and uppercase 'i' are excluded for readability. The full character list can be viewed in the <a href="script.js">JS file</a> that powers this webpage. </p>
+            
             
             <div id="inputContainer">
-                <div id="lengthContainer">
-                    <div id="lengthContainerInner">
+                <div id="inputContainerInner">                    
+                    <div id="lengthContainer">
                         <label for="passwordLength">Length: </label>
-                        <input id="passwordLength" type="number" name="Length" max="64">
+                        <input id="passwordLength" type="number" name="Length" max="64" min="1">
                     </div>
-                    <button onclick="GeneratePassword()">Generate!</button>
+                    
+                    <div class="checkboxContainer">
+                        <input class="checkbox" id="specialCheckbox" type="checkbox">
+                        <label for="specialCheckbox">Special</label>
+                    </div>
+                    
+                    <div class="checkboxContainer">
+                        <input class="checkbox" id="numberCheckbox" type="checkbox">
+                        <label for="numberCheckbox">Numbers</label>
+                    </div>
+                    
+                    <div class="checkboxContainer">
+                        <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
+                        <label for="uppercaseCheckbox">Uppercase</label>
+                    </div>
+                    
+                    <div class="checkboxContainer">
+                        <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
+                        <label for="lowercaseCheckbox">Lowercase</label>
+                    </div>
+                    
+
                 </div>
-                   
+                
+                   <button onclick="generatePassword()">Go!!</button>
             </div>
      
             
             <div id="passwordContainer">
-                <p id="generatedPassword"></p>
+                <h1 id="generatedPassword"></h1>
             </div>
             
-            <p>Easily generate a random password, up to 64 characters. Certain characters, such as lowercase 'l' and uppercase 'i' are excluded for readability. The full character list can be viewed in the <a href="script.js">JS file</a> that powers this webpage. </p>
+           
             
         </div>
 
