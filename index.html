@@ -2,18 +2,36 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css.css">
+        <title>Simple JS Password Generator</title>
     </head>
     <body>
-        
-        <h2>Simple JS Password Generator</h2>
-        
-        <label for="passwordLength">Length: </label>
-        <input id="passwordLength" type="number" name="Length" max="64">
-        <button onclick="GeneratePassword()">Generate!</button>        
-        
-        <p id="generatedPassword"></p>
+        <div id="mainBody">
             
-        <p>Easily generate a random password, up to 64 characters. Certain characters, such as lowercase 'l' and uppercase 'i' are excluded for readability. The full character list can be viewed in the <a href="script.js">JS file</a> that powers this webpage. </p>
+            <h2>Simple JS Password Generator</h2>
+            
+            
+            <div id="inputContainer">
+                <div id="lengthContainer">
+                    <div id="lengthContainerInner">
+                        <label for="passwordLength">Length: </label>
+                        <input id="passwordLength" type="number" name="Length" max="64">
+                    </div>
+                    <button onclick="GeneratePassword()">Generate!</button>
+                </div>
+                   
+            </div>
+     
+            
+            <div id="passwordContainer">
+                <p id="generatedPassword"></p>
+            </div>
+            
+            <p>Easily generate a random password, up to 64 characters. Certain characters, such as lowercase 'l' and uppercase 'i' are excluded for readability. The full character list can be viewed in the <a href="script.js">JS file</a> that powers this webpage. </p>
+            
+        </div>
+
+        
+
         <script src="script.js"></script>
     </body>
 </html>

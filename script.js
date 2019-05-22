@@ -85,5 +85,5 @@ function GeneratePassword() {
     
     /* Displays the generated password on-screen and makes the paragraph that displays it visible. */
     document.getElementById("generatedPassword").innerHTML = generatedPassword;
-    document.getElementById("generatedPassword").style.display = "block";
+    document.getElementById("generatedPassword").style.display = "inline-block";
 }

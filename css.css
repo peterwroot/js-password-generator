@@ -1,32 +1,54 @@
 body{
-    
+    text-align: center;
     font-family: monospace;
     background-color: aquamarine;
 }
 button{
     font-family: monospace;
     outline: none;
-    border: 1px solid black;
+    border: 2px solid black;
     background-color: whitesmoke;
     padding: 10px;
     margin: 0px;
+
 }
 
 #passwordLength{
     font-family: monospace;
+    border: none;
     background-color: whitesmoke;
     width: 5ch;
-    border: 1px solid black;
     margin: 0px;
     padding: 10px;
+
 }
 
+
 #generatedPassword{
+
     font-family: monospace;
     font-size: 14pt;
     background-color: whitesmoke;
     text-align: center;
-    border: 1px solid black;
-    padding: 5px;
+    border: 2px solid black;
+    padding: 8px;
     display: none;
+}
+
+#mainBody{
+    padding: 100px;
+}
+
+#passwordContainer{
+    text-align: center;
+}
+
+#inputContainer{
+    text-align: center;
+}
+#lengthContainerInner{
+    display: inline-block;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    padding-left: 20px;
 }
