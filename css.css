@@ -33,6 +33,8 @@ button{
     border: 2px solid black;
     padding: 8px;
     display: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #mainBody{
@@ -51,4 +53,9 @@ button{
     background-color: whitesmoke;
     border: 2px solid black;
     padding-left: 20px;
+}
+
+p{  
+    display: inline-block;
+    max-width: 500px;
 }
