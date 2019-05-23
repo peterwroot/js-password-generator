@@ -2,80 +2,62 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css.css">
-
         <title>Simple Password Generator</title>
     </head>
     <body>
         <div id="mainBody">
-            
             <div id="upperBody">
                 <h1>Simple Password Generator</h1>
-
-                <p>Easily generate a random password, up to 64 characters.  
-            
-            
-
-            <div id="inputContainer">
-                <div id="inputContainerInner">                    
-                    <div class="controlContainer">
-                        <label for="passwordLength">Length: </label>
-                        <input id="passwordLength" type="number" name="Length" max="64" min="1">
-                        <span class="tooltiptext">Set the password length</span>
+                <p>Easily generate strong random passwords.  
+                <div id="inputContainer">
+                    <div id="inputContainerInner">                    
+                        <div class="controlContainer">
+                            <label for="passwordLength">Length: </label>
+                            <input id="passwordLength" type="number" name="Length" max="64" min="8">
+                            <span class="tooltiptext">Set the password length</span>
+                        </div>
+                        <div class="controlContainer">
+                            <input class="checkbox" id="specialCheckbox" type="checkbox">
+                            <label for="specialCheckbox">Special</label>
+                            <span class="tooltiptext">Include special characters</span>
+                        </div>
+                        <div class="controlContainer">
+                            <input class="checkbox" id="numberCheckbox" type="checkbox">
+                            <label for="numberCheckbox">Numbers</label>
+                            <span class="tooltiptext">Include numerical characters</span>
+                        </div>
+                        <div class="controlContainer">
+                            <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
+                            <label for="uppercaseCheckbox">Upper case</label>
+                            <span class="tooltiptext">Include upper case characters</span>
+                        </div>
+                        <div class="controlContainer">
+                            <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
+                            <label for="lowercaseCheckbox">Lower case</label>
+                            <span class="tooltiptext">Include lower case characters</span>
+                        </div>
+                        <div class="controlContainer">
+                            <input class="checkbox" id="readableCheckbox" type="checkbox">
+                            <label for="readableCheckbox">Readable</label>
+                            <span class="tooltiptext">Exclude ambiguous characters</span>
+                        </div>
+                        <div class="controlContainer">
+                            <button onclick="animatePassword()">Generate!</button>
+                            <span class="tooltiptext">Generate the password</span>
+                        </div>
+                        <div class="controlContainer">
+                            <button id="copyButton" onClick="copyToClipboard()">Copy to clipboard</button>
+                            <span class="tooltiptext">Copy password to the clipboard</span>
+                        </div>                
                     </div>
-                    
-                    <div class="controlContainer">
-                        <input class="checkbox" id="specialCheckbox" type="checkbox">
-                        <label for="specialCheckbox">Special</label>
-                        <span class="tooltiptext">Include special characters</span>
-                    </div>
-                    
-                    <div class="controlContainer">
-                        <input class="checkbox" id="numberCheckbox" type="checkbox">
-                        <label for="numberCheckbox">Numbers</label>
-                        <span class="tooltiptext">Include numerical characters</span>
-                    </div>
-                    
-                    <div class="controlContainer">
-                        <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
-                        <label for="uppercaseCheckbox">Upper case</label>
-                        <span class="tooltiptext">Include upper case characters</span>
-                    </div>
-                    
-                    <div class="controlContainer">
-                        <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
-                        <label for="lowercaseCheckbox">Lower case</label>
-                        <span class="tooltiptext">Include lower case characters</span>
-                    </div>
-                    
-                    <div class="controlContainer">
-                        <input class="checkbox" id="readableCheckbox" type="checkbox">
-                        <label for="readableCheckbox">Readable</label>
-                        <span class="tooltiptext">Exclude ambiguous characters</span>
-                    </div>
-                    
-                    <div class="controlContainer">
-                        <button onclick="generatePassword()">Generate!</button>
-                        <span class="tooltiptext">Generate the password</span>
-                    </div>
-                  
-                    
                 </div>
-                
-
-            </div>
-            
-            </div>
-                             
+            </div>      
             <div id="passwordContainer">
                 <p id="generatedPassword"></p>
             </div>
-
-           
-            
         </div>
-
         <p id="footer">Made with ❤️ (and JavaScript!) by <a href="https://github.com/peter-wroot" target="_blank"><b>Peter Wroot</b></a></p>
-
+        <input id="toCopy">
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,5 +1,7 @@
 HTML{
     height: 100%;
+    background-image: url(images/bg.png);
+    background-color: whitesmoke;
 }
 
 body{
@@ -9,7 +11,6 @@ body{
     padding: 0px;
     margin: 0px;
     color: whitesmoke;
-
 }
 
 p{  
@@ -35,27 +36,30 @@ button:active{
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0);
     width: 5ch;
-    margin-left: -10px;
 }
 
 #generatedPassword{
-    display: none;
-
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    opacity: 0;
 }
 
 #upperBody{
     background-image: linear-gradient(to bottom right, #1a237e,#2196f3);
     padding: 20px;
-    
 }
 
 #passwordContainer{
     text-align: center;
     font-family: monospace;
     font-weight: 10;
-    color: black;
+    color:#212121;
     padding-top: 200px;
     font-size: 40pt;
+}
+
+#passwordContainer p{
+    transition: all 0.2s ease-in-out;
 }
 
 #inputContainer{
@@ -63,19 +67,19 @@ button:active{
 
 }
 #inputContainerInner{
-    font-size: 13p
+    font-size: 13pt;
     display: inline-block;
     padding: 10px;
     height: 20px;
     line-height: 20px;
 }
 label{
-    margin-right: 10px;
+    font-size: 12pt;
 }
 
 .controlContainer{
     display: inline-block;
-
+    margin: 0px 20px 0px; 30px;
 }
 
 .tooltiptext{
@@ -95,14 +99,13 @@ label{
 
 .controlContainer .tooltiptext{
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: all 0.2s ease-in-out;
 }
 
 .controlContainer:hover .tooltiptext{
     visibility: visible;
     opacity: 1;
 }
-
 
 .controlContainer .tooltiptext::after{
   content: " ";
@@ -116,15 +119,28 @@ label{
 }
 
 #footer{
-    width: 400px;
-    color: black;
     position: absolute;
+    width:100%;
+    left: 0;
+    color: black;
     bottom: 0;
-    margin-left: -200px;
     padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: white;
+    z-index: 2;
 }
 
 #footer a{
     text-decoration: none;
-    color: black;
+    color:black;
+}
+
+#toCopy{
+    position: absolute;
+    bottom: 0;
+}
+
+#copyButton{
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
 }

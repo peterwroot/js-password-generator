@@ -8,15 +8,21 @@ document.getElementById("uppercaseCheckbox").checked = true;
 document.getElementById("lowercaseCheckbox").checked = true;
 
 /* Creates an empty array for each type of character - Uppercase, Lowercase, Numeric, and Special. */
-
 var chars_Numeric = [];
 var chars_Special = [];
 var chars_Lower = [];
 var chars_Upper = [];
 
+/* hides the password and then runs the main password generation function. */
+function animatePassword() {
+    document.getElementById("generatedPassword").innerHTML="";
+    document.getElementById("generatedPassword").style.opacity = 0;
+    setTimeout(generatePassword,200)
+}
+
 /* Main function for generating the password. */
 function generatePassword() {
-    
+        
     /* gets the status of the four option checkboxes. */
     var useSpecial = document.getElementById("specialCheckbox");
     var useNumbers = document.getElementById("numberCheckbox");
@@ -200,11 +206,17 @@ function generatePassword() {
     
     /* Concatenate the four arrays into a single array*/
     var charsToUse = chars_Special.concat(chars_Numeric).concat(chars_Upper).concat(chars_Lower);
-    console.log(charsToUse)   
-    
-    
+
     /* Variable containing the user's chosen password length. */
     var passwordLength = document.getElementById("passwordLength").value;
+    
+    /* sets the font size based on the length of the password and the width of the window*/
+    /* ensures the password always fits on-screen*/
+    var windowSize = window.innerWidth;
+    console.log(windowSize)
+    var newFontSize = Math.floor((windowSize / passwordLength) );
+    console.log(newFontSize)
+    document.getElementById("generatedPassword").style.fontSize = newFontSize + "pt";
     
     /* Creates the variable for the password. */
     var generatedPassword = "";
@@ -212,18 +224,26 @@ function generatePassword() {
     /* For each character in the password, loops through the charsToUse array and picks a random value, and adds it to the generatedPassword variable. */
     for (i = 0; i < passwordLength; i++) {
         var getRandomCharacter = charsToUse[Math.floor(Math.random() * charsToUse.length)];
-        console.log(getRandomCharacter)
         generatedPassword += getRandomCharacter;
     }
-    console.log(charsToUse)
+    
     /* Only generates a password if at least one of the four checkboxes are checked. */
     /* Displays a warning message if the user hasn't selected at least one.*/
     if (charsToUse != "") {
         document.getElementById("generatedPassword").innerHTML = generatedPassword;
     } else {
-        console.log("idiot")
         document.getElementById("generatedPassword").innerHTML = "Nice try."
     }
+
     /*Makes the generated password visible.*/
-    document.getElementById("generatedPassword").style.display = "inline-block";
+    document.getElementById("generatedPassword").style.opacity = 1;
+    document.getElementById("copyButton").style.opacity = 1;
+}
+
+/* Copies the generated password to the user's clipboard. */
+function copyToClipboard() {
+    document.getElementById("toCopy").value=document.getElementById("generatedPassword").innerHTML;
+    var copyText = document.getElementById("toCopy");
+    copyText.select();
+    document.execCommand("copy");
 }
