@@ -2,54 +2,62 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css.css">
+
         <title>Simple JS Password Generator</title>
     </head>
     <body>
         <div id="mainBody">
             
-            <h2>Simple JS Password Generator</h2>
+            <div id="upperBody">
+                <h2>Simple JS Password Generator</h2>
+
+                <p>Easily generate a random password, up to 64 characters.  
             
-             <p>Easily generate a random password, up to 64 characters. Certain characters, such as lowercase 'l' and uppercase 'i' are excluded for readability. The full character list can be viewed in the <a href="script.js">JS file</a> that powers this webpage. </p>
             
-            
+
             <div id="inputContainer">
                 <div id="inputContainerInner">                    
-                    <div id="lengthContainer">
+                    <div class="controlContainer">
                         <label for="passwordLength">Length: </label>
                         <input id="passwordLength" type="number" name="Length" max="64" min="1">
                     </div>
                     
-                    <div class="checkboxContainer">
+                    <div class="controlContainer">
                         <input class="checkbox" id="specialCheckbox" type="checkbox">
                         <label for="specialCheckbox">Special</label>
                     </div>
                     
-                    <div class="checkboxContainer">
+                    <div class="controlContainer">
                         <input class="checkbox" id="numberCheckbox" type="checkbox">
                         <label for="numberCheckbox">Numbers</label>
                     </div>
                     
-                    <div class="checkboxContainer">
+                    <div class="controlContainer">
                         <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
                         <label for="uppercaseCheckbox">Uppercase</label>
                     </div>
                     
-                    <div class="checkboxContainer">
+                    <div class="controlContainer">
                         <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
                         <label for="lowercaseCheckbox">Lowercase</label>
                     </div>
                     
-
+                    <div class="controlContainer">
+                        <button onclick="generatePassword()">Go!!</button>
+                    </div>
+                  
+                    
                 </div>
                 
-                   <button onclick="generatePassword()">Go!!</button>
+
             </div>
-     
             
+            </div>
+                             
             <div id="passwordContainer">
-                <h1 id="generatedPassword"></h1>
+                <p id="generatedPassword"></p>
             </div>
-            
+
            
             
         </div>
