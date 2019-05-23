@@ -17,6 +17,18 @@ var chars_Upper = [];
 function animatePassword() {
     document.getElementById("generatedPassword").innerHTML="";
     document.getElementById("generatedPassword").style.opacity = 0;
+    
+    /* variable for password length*/
+    var passwordLength = document.getElementById("passwordLength").value;
+    
+    /* sets the font size based on the length of the password and the width of the window*/
+    /* ensures the password always fits on-screen*/
+    var windowSize = window.innerWidth;
+    console.log(windowSize)
+    var newFontSize = Math.floor((windowSize / passwordLength) );
+    console.log(newFontSize)
+    document.getElementById("generatedPassword").style.fontSize = newFontSize + "pt";
+        
     setTimeout(generatePassword,200)
 }
 
@@ -209,14 +221,6 @@ function generatePassword() {
 
     /* Variable containing the user's chosen password length. */
     var passwordLength = document.getElementById("passwordLength").value;
-    
-    /* sets the font size based on the length of the password and the width of the window*/
-    /* ensures the password always fits on-screen*/
-    var windowSize = window.innerWidth;
-    console.log(windowSize)
-    var newFontSize = Math.floor((windowSize / passwordLength) );
-    console.log(newFontSize)
-    document.getElementById("generatedPassword").style.fontSize = newFontSize + "pt";
     
     /* Creates the variable for the password. */
     var generatedPassword = "";
