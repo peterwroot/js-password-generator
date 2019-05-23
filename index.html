@@ -3,13 +3,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css.css">
 
-        <title>Simple JS Password Generator</title>
+        <title>Simple Password Generator</title>
     </head>
     <body>
         <div id="mainBody">
             
             <div id="upperBody">
-                <h2>Simple JS Password Generator</h2>
+                <h2>Simple Password Generator</h2>
 
                 <p>Easily generate a random password, up to 64 characters.  
             
@@ -20,30 +20,42 @@
                     <div class="controlContainer">
                         <label for="passwordLength">Length: </label>
                         <input id="passwordLength" type="number" name="Length" max="64" min="1">
+                        <span class="tooltiptext">Set the password length</span>
                     </div>
                     
                     <div class="controlContainer">
                         <input class="checkbox" id="specialCheckbox" type="checkbox">
                         <label for="specialCheckbox">Special</label>
+                        <span class="tooltiptext">Include special characters</span>
                     </div>
                     
                     <div class="controlContainer">
                         <input class="checkbox" id="numberCheckbox" type="checkbox">
                         <label for="numberCheckbox">Numbers</label>
+                        <span class="tooltiptext">Include numerical characters</span>
                     </div>
                     
                     <div class="controlContainer">
                         <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
-                        <label for="uppercaseCheckbox">Uppercase</label>
+                        <label for="uppercaseCheckbox">Upper case</label>
+                        <span class="tooltiptext">Include upper case characters</span>
                     </div>
                     
                     <div class="controlContainer">
                         <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
-                        <label for="lowercaseCheckbox">Lowercase</label>
+                        <label for="lowercaseCheckbox">Lower case</label>
+                        <span class="tooltiptext">Include lower case characters</span>
                     </div>
                     
                     <div class="controlContainer">
-                        <button onclick="generatePassword()">Go!!</button>
+                        <input class="checkbox" id="readableCheckbox" type="checkbox">
+                        <label for="readableCheckbox">Readable</label>
+                        <span class="tooltiptext">Exclude ambiguous characters</span>
+                    </div>
+                    
+                    <div class="controlContainer">
+                        <button onclick="generatePassword()">Generate!</button>
+                        <span class="tooltiptext">Generate the password</span>
                     </div>
                   
                     
@@ -62,7 +74,7 @@
             
         </div>
 
-        
+        <p id="footer">Made with love (and JavaScript!) by <a href="https://github.com/peter-wroot">Peter Wroot</a></p>
 
         <script src="script.js"></script>
     </body>

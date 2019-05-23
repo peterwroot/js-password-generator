@@ -22,20 +22,33 @@ function generatePassword() {
     var useNumbers = document.getElementById("numberCheckbox");
     var useUpper = document.getElementById("uppercaseCheckbox");
     var useLower = document.getElementById("lowercaseCheckbox");
+    var useReadable = document.getElementById("readableCheckbox");
     
     /* for each checkbox, check if it is checked. If so, populate the array with the chosen characters. */
     /* If the box is not checked, blank out the particular array.*/
     if (useSpecial.checked === true) {
         chars_Special = [
             "!",
+            '"',
             "£",
             "$",
             "%",
+            "^",
             "&",
             "*",
+            "(",
+            ")",
+            "-",
+            "+",
+            "=",
+            "[",
+            "]",
+            "{",
+            "}",
+            "~",
             "@",
             "?",
-            "#"
+            "#",
         ];
     } else {
         chars_Special = [];
@@ -68,13 +81,17 @@ function generatePassword() {
             "f",
             "g",
             "h",
+            "i",
             "j",
             "k",
+            "l",
             "m",
             "n",
+            "o",
             "p",
             "q",
             "r",
+            "s",
             "t",
             "u",
             "v",
@@ -89,6 +106,41 @@ function generatePassword() {
     
     if (useUpper.checked === true) {
         chars_Upper = [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"
+        ];
+    } else {
+        chars_Upper = [];
+    }
+    
+    /*If the user has selected the 'readable' option, then we remove ambiguous characters*/
+    if (useReadable.checked === true) {
+        if (useUpper.checked === true){
+            chars_Upper = [
             "A",
             "B",
             "C",
@@ -112,12 +164,44 @@ function generatePassword() {
             "Y",
             "Z"
         ];
-    } else {
-        chars_Upper = [];
+        } else {
+            chars_Upper = [];
+        }
+        
+        if (useLower.checked === true){
+            chars_Lower = [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "m",
+            "n",
+            "p",
+            "q",
+            "r",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"
+        ];
+        } else {
+            chars_Lower = [];
+        }        
     }
     
     /* Concatenate the four arrays into a single array*/
     var charsToUse = chars_Special.concat(chars_Numeric).concat(chars_Upper).concat(chars_Lower);
+    console.log(charsToUse)   
+    
     
     /* Variable containing the user's chosen password length. */
     var passwordLength = document.getElementById("passwordLength").value;
@@ -127,15 +211,19 @@ function generatePassword() {
     
     /* For each character in the password, loops through the charsToUse array and picks a random value, and adds it to the generatedPassword variable. */
     for (i = 0; i < passwordLength; i++) {
-        var getRandomCharacterFromAcceptableCharacterList = charsToUse[Math.floor(Math.random() * charsToUse.length)];
-        generatedPassword += getRandomCharacterFromAcceptableCharacterList;
+        var getRandomCharacter = charsToUse[Math.floor(Math.random() * charsToUse.length)];
+        console.log(getRandomCharacter)
+        generatedPassword += getRandomCharacter;
     }
     console.log(charsToUse)
     /* Only generates a password if at least one of the four checkboxes are checked. */
-    /* Displays the generated password on-screen and makes the paragraph that displays it visible. */
+    /* Displays a warning message if the user hasn't selected at least one.*/
     if (charsToUse != "") {
         document.getElementById("generatedPassword").innerHTML = generatedPassword;
-        document.getElementById("generatedPassword").style.display = "inline-block";
+    } else {
+        console.log("idiot")
+        document.getElementById("generatedPassword").innerHTML = "Nice try."
     }
+    /*Makes the generated password visible.*/
+    document.getElementById("generatedPassword").style.display = "inline-block";
 }
-
