@@ -1,64 +1,9 @@
 body{
     text-align: center;
-    font-family: monospace;
-}
-button{
-    height: 50px;
-    width:50px;
-    line-height: 30px;
-    font-family: monospace;
-    background-color: whitesmoke;
+    font-family: Helvetica;
+    padding: 0px;
     margin: 0px;
-    border: 2px solid black;
-    border-radius: 50px;
-}
-
-button:active{
-    background-color: gainsboro;
-}
-
-#passwordLength{
-    font-family: monospace;
-    border: none;
-    background-color: whitesmoke;
-    width: 5ch;
-    margin: 0px;
-    margin-left: -5px;
-}
-
-#generatedPassword{
-    font-family: monospace;
-    font-weight: 100;
-    text-align: center;
-    display: none;
-}
-
-#mainBody{
-    padding: 100px;
-}
-
-#passwordContainer{
-    text-align: center;
-}
-
-#inputContainer{
-
-    padding: 20px;
-
-}
-#inputContainerInner{
-    display: inline-block;
-    background-color: whitesmoke;
-    border: 2px solid black;
-    border-radius: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    line-height: 30px;
-}
-
-#lengthContainer{
-    display: inline-block;
+    color: whitesmoke;
 }
 
 p{  
@@ -67,12 +12,59 @@ p{
     margin: 0;
 }
 
-.checkboxContainer{
-    display: inline-block;
-    padding: 5px;
+button{
+    height: 20px;
 }
 
-.checkbox{
-    transform: scale(1.5);
-    margin: 0px;
+button:active{
+    background-color: gainsboro;
 }
+
+#passwordLength{
+    font-size: 12pt;
+    border: none;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0);;
+    width: 5ch;
+    margin-left: -10px;
+}
+
+#generatedPassword{
+    padding: 50px;
+    font-size: 24pt;
+    text-align: center;
+    display: none;
+}
+
+#upperBody{
+    background-image: linear-gradient(#303F9F,#448AFF);
+    padding: 20px;
+}
+
+#passwordContainer{
+    text-align: center;
+    font-family: monospace;
+    font-weight: 10;
+    color: black;
+}
+
+#inputContainer{
+    padding-top: 20px;
+
+}
+#inputContainerInner{
+    font-size: 13p
+    display: inline-block;
+    padding: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+label{
+    margin-right: 10px;
+}
+
+.controlContainer{
+    display: inline-block;
+
+}
+
