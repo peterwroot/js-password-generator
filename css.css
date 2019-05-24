@@ -41,9 +41,11 @@ button:active{
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0);
     width: 5ch;
+    border-bottom: 1px solid white;
 }
 
 #generatedPassword{
+    padding-top: 20px;
     transition: all 0.2s ease-in-out;
     display: inline-block;
     opacity: 0;
@@ -63,8 +65,6 @@ button:active{
     font-family: monospace;
     font-weight: 10;
     color:#212121;
-    padding-top: 200px;
-    font-size: 40pt;
 }
 
 #passwordContainer p{
