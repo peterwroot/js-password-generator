@@ -13,6 +13,11 @@ body{
     color: whitesmoke;
 }
 
+#upperBody{
+    background-image: linear-gradient(to bottom right, #1a237e,#2196f3);
+    padding: 20px;
+}
+
 p{  
     display: inline-block;
     margin: 0;
@@ -44,9 +49,13 @@ button:active{
     opacity: 0;
 }
 
-#upperBody{
-    background-image: linear-gradient(to bottom right, #1a237e,#2196f3);
-    padding: 20px;
+#generateControls .controlContainer{
+    width: 150px;
+    margin: 5px;
+}
+
+#upperBody p{
+    padding-bottom: 20px;
 }
 
 #passwordContainer{
@@ -78,28 +87,41 @@ label{
 }
 
 .controlContainer{
+    width: 120px;
+    text-align: left;
+    position: relative;
     display: inline-block;
-    margin: 0px 10px 0px 10px;
+
 }
 
-.tooltiptext{
-    font-size: 10pt;
+#generateControls{
+    padding-top: 20px;
+}
+
+#generateControls button{
+    width: 150px;
+    padding: 15px;
+    border-radius: 20px;
+    line-height: 0px;
+}
+
+.controlContainer .tooltiptext{
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    font-size: 10pt;
     width: 120px;
     background-color: rgba(255, 255, 255, 0.2);
     color:white;
     text-align: center;
-    padding: 5px;
-    border-radius: 6px;
     position: absolute;
     z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 5px;
     margin-left: -60px;
-    margin-top: 10px;
-}
-
-.controlContainer .tooltiptext{
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .controlContainer:hover .tooltiptext{
@@ -110,12 +132,12 @@ label{
 .controlContainer .tooltiptext::after{
   content: " ";
   position: absolute;
-  bottom: 100%;  
+  top: 100%;  
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent rgba(255, 255, 255, 0.2) transparent;
+  border-color:  rgba(255, 255, 255, 0.2) transparent transparent transparent;
 }
 
 #footer{
@@ -140,7 +162,3 @@ label{
     bottom: 0;
 }
 
-#copyButton{
-    transition: all 0.2s ease-in-out;
-    opacity: 0;
-}
