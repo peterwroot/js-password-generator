@@ -13,26 +13,26 @@
                     <div id="inputContainerInner">                    
                         <div class="controlContainer">
                             <label for="passwordLength">Length: </label>
-                            <input id="passwordLength" type="number" name="Length" max="64" min="8">
+                            <input id="passwordLength" type="number" name="Length" max="64" min="8" value="16">
                             <span class="tooltiptext">Set the password length</span>
                         </div>
                         <div class="controlContainer">
-                            <input class="checkbox" id="specialCheckbox" type="checkbox">
+                            <input class="checkbox" id="specialCheckbox" type="checkbox" checked>
                             <label for="specialCheckbox">Special</label>
                             <span class="tooltiptext">Include special characters</span>
                         </div>
                         <div class="controlContainer">
-                            <input class="checkbox" id="numberCheckbox" type="checkbox">
+                            <input class="checkbox" id="numberCheckbox" type="checkbox" checked>
                             <label for="numberCheckbox">Numbers</label>
                             <span class="tooltiptext">Include numerical characters</span>
                         </div>
                         <div class="controlContainer">
-                            <input class="checkbox" id="uppercaseCheckbox" type="checkbox">
+                            <input class="checkbox" id="uppercaseCheckbox" type="checkbox" checked>
                             <label for="uppercaseCheckbox">Upper case</label>
                             <span class="tooltiptext">Include upper case characters</span>
                         </div>
                         <div class="controlContainer">
-                            <input class="checkbox" id="lowercaseCheckbox" type="checkbox">
+                            <input class="checkbox" id="lowercaseCheckbox" type="checkbox" checked>
                             <label for="lowercaseCheckbox">Lower case</label>
                             <span class="tooltiptext">Include lower case characters</span>
                         </div>
@@ -44,11 +44,11 @@
                     </div>
                     <div class="inputContainerInner" id="generateControls">
                         <div class="controlContainer">
-                            <button onclick="animatePassword()">Generate!</button>
+                            <button onclick="generatePassword()">Generate!</button>
                         </div>
                         <div class="controlContainer">
                             <button id="copyButton" onClick="copyToClipboard()">Copy to clipboard</button>
-                        </div>                
+                        </div>            
                     </div>
                     
                 </div>
