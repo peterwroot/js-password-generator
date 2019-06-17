@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css.css">
-        <title>Password Generator</title>
-    </head>
-    <body>
-        <div id="mainBody">
-            <div id="upperBody">
-                <h1>Password Generator</h1>
-                <p>Easily generate strong random passwords.  
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="upperBody">
+            <h1>Password Generator</h1>
+            <p>Easily generate strong random passwords.
                 <div id="inputContainer">
-                    <div id="inputContainerInner">                    
+                    <div id="inputContainerInner">
                         <div class="controlContainer">
                             <label for="passwordLength">Length: </label>
                             <input id="passwordLength" type="number" name="Length" max="64" min="8" value="16">
@@ -48,17 +50,17 @@
                         </div>
                         <div class="controlContainer">
                             <button id="copyButton" onClick="copyToClipboard()">Copy to clipboard</button>
-                        </div>            
+                        </div>
                     </div>
-                    
                 </div>
-            </div>      
-            <div id="passwordContainer">
-                <p id="generatedPassword"></p>
-            </div>
         </div>
-        <p id="footer">Made with ❤️ (and JavaScript!) by <a href="https://github.com/peter-wroot" target="_blank"><b>Peter Wroot</b></a></p>
-        <input id="toCopy">
-        <script src="script.js"></script>
-    </body>
+        <div id="passwordContainer">
+            <p id="generatedPassword"></p>
+        </div>
+    </div>
+    <p id="footer">Made with ❤️ (and JavaScript!) by <a href="https://github.com/peter-wroot" target="_blank"><b>Peter Wroot</b></a></p>
+    <input id="toCopy">
+    <script src="script.js"></script>
+</body>
+
 </html>

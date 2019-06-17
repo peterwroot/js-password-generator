@@ -13,7 +13,7 @@ function generatePassword() {
     if (document.getElementById("specialCheckbox").checked === true){
         availableCharacterList = availableCharacterList.concat(availableChars_Special);
     };
-    if (document.getElementById("numberCheckbox") === true){
+    if (document.getElementById("numberCheckbox").checked === true){
         availableCharacterList = availableCharacterList.concat(availableChars_Numeric);
     };
     if (document.getElementById("uppercaseCheckbox").checked === true){
@@ -22,6 +22,7 @@ function generatePassword() {
     if (document.getElementById("lowercaseCheckbox").checked === true){
         availableCharacterList = availableCharacterList.concat(availableChars_Lowercase);
     };
+    console.log(availableCharacterList)
     /* If the 'readable' checkbox is checked, we remove some ambiguous/hard-to-read characters from the pool */
     if (document.getElementById("readableCheckbox").checked === true){
         availableCharacterList = availableCharacterList.replace(/I|O|L|S|i|o|l|s|-|_|&|"|~|=/g, "");

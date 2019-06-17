@@ -31,21 +31,17 @@ button:active{
     width: 5ch;
     border-bottom: 1px solid white;
 }
-
 #generatedPassword{
     color: whitesmoke;
     display: inline-block;
 }
-
 #generateControls .controlContainer{
     width: 150px;
     margin: 5px;
 }
-
 #upperBody p{
     padding-bottom: 20px;
 }
-
 #passwordContainer{
     text-align: center;
     font-family: monospace;
