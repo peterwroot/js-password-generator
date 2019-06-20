@@ -38,9 +38,7 @@ button{
     margin-bottom: 10px;
 }
 
-.passwordOptionsContainer{
-    margin-bottom: 50px;
-}
+
 
 .passwordOptions input {
     display: inline-block;
@@ -53,36 +51,6 @@ button{
 .passwordOptions p {
     display: inline-block;
 }
-/*#footer {
-    background-color: black;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    color: white;
-    bottom: 0;
-    padding-bottom: 30px;
-    padding-top: 10px;
-    z-index: 2;
-    margin: 0;
-}
-
-#footer a {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-}
-
-#toCopy {
-    position: absolute;
-    bottom: 0;
-}
-
-#generatedPassword{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}*/
 
 #toCopy{
     border-radius: 0px;
