@@ -51,15 +51,15 @@ button{
 }
 
 #footer {
+    background-color: black;
     text-align: center;
     position: absolute;
     width: 100%;
     left: 0;
-    color: black;
+    color: white;
     bottom: 0;
     padding-bottom: 10px;
     padding-top: 10px;
-    background-color: white;
     z-index: 2;
     margin: 0;
 }
@@ -67,7 +67,7 @@ button{
 #footer a {
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #toCopy {
