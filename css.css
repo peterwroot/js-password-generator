@@ -15,7 +15,11 @@ body{
 
     display: block;
 }
-
+button{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
 
 .controlContainer input {
     display: inline;
@@ -54,7 +58,7 @@ body{
     left: 0;
     color: white;
     bottom: 0;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     padding-top: 10px;
     z-index: 2;
     margin: 0;
