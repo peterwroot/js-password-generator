@@ -2,7 +2,13 @@
 <html>
 
 <head>
+    <!---->
+    <!--Bootstrap CSS and viewport-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <!--Custom CSS-->
     <link rel="stylesheet" type="text/css" href="css.css">
+    <!--Favicon Link, and Apple specific meta-->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -10,60 +16,85 @@
 </head>
 
 <body>
-    <div id="mainBody">
-        <div id="upperBody">
-            <h1>Password Generator</h1>
-            <p>Easily generate strong random passwords.
-                <div id="inputContainer">
-                    <div id="inputContainerInner">
-                        <div class="controlContainer">
-                            <label for="passwordLength">Length: </label>
-                            <input id="passwordLength" type="number" name="Length" max="64" min="8" value="16">
-                            <span class="tooltiptext">Set the password length</span>
-                        </div>
-                        <div class="controlContainer">
-                            <input class="checkbox" id="specialCheckbox" type="checkbox" checked>
-                            <label for="specialCheckbox">Special</label>
-                            <span class="tooltiptext">Include special characters</span>
-                        </div>
-                        <div class="controlContainer">
-                            <input class="checkbox" id="numberCheckbox" type="checkbox" checked>
-                            <label for="numberCheckbox">Numbers</label>
-                            <span class="tooltiptext">Include numerical characters</span>
-                        </div>
-                        <div class="controlContainer">
-                            <input class="checkbox" id="uppercaseCheckbox" type="checkbox" checked>
-                            <label for="uppercaseCheckbox">Upper case</label>
-                            <span class="tooltiptext">Include upper case characters</span>
-                        </div>
-                        <div class="controlContainer">
-                            <input class="checkbox" id="lowercaseCheckbox" type="checkbox" checked>
-                            <label for="lowercaseCheckbox">Lower case</label>
-                            <span class="tooltiptext">Include lower case characters</span>
-                        </div>
-                        <div class="controlContainer">
-                            <input class="checkbox" id="readableCheckbox" type="checkbox">
-                            <label for="readableCheckbox">Readable</label>
-                            <span class="tooltiptext">Exclude ambiguous characters</span>
-                        </div>
-                    </div>
-                    <div class="inputContainerInner" id="generateControls">
-                        <div class="controlContainer">
-                            <button onclick="generatePassword()">Generate!</button>
-                        </div>
-                        <div class="controlContainer">
-                            <button id="copyButton" onClick="copyToClipboard()">Copy to clipboard</button>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row pageHeader">
+            <div class="col">
+                <h1>Password Generator</h1>
+                <p>Easily generate strong random passwords.
+            </div>
+        </div>
+        <div class="row passwordOptionsContainer">
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="passwordLength">Length:</label>
+                    <input id="passwordLength" type="number" name="Length" max="64" min="8" value="16">
+
                 </div>
+            </div>
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="specialCheckbox">Special: </label>
+                    <input class="checkbox" id="specialCheckbox" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="numberCheckbox">Numbers: </label>
+                    <input class="checkbox" id="numberCheckbox" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="uppercaseCheckbox">Uppercase: </label>
+                    <input class="checkbox" id="uppercaseCheckbox" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="lowercaseCheckbox">Lowercase: </label>
+                    <input class="checkbox" id="lowercaseCheckbox" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col-md passwordOptions">
+                <div class="controlContainer">
+                    <label for="readableCheckbox">Readable: </label>
+                    <input class="checkbox" id="readableCheckbox" type="checkbox">
+                </div>
+            </div>
         </div>
-        <div id="passwordContainer">
-            <p id="generatedPassword"></p>
+        <div class="row">
+            <div class="col text-center">
+                <div class="controlContainer">
+                    <button onclick="generatePassword()">Generate!</button>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="controlContainer">
+                    <button id="copyButton" onClick="copyToClipboard()">Copy to clipboard</button>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div id="passwordContainer">
+                    <p id="generatedPassword"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
     </div>
     <p id="footer">Made with ❤️ (and JavaScript!) by <a href="https://github.com/peter-wroot" target="_blank"><b>Peter Wroot</b></a></p>
     <input id="toCopy">
-    <script src="script.js"></script>
-</body>
 
-</html>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body></html>

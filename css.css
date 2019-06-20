@@ -1,116 +1,54 @@
-HTML{
+HTML {
     height: 100%;
-    background-image: linear-gradient(to bottom right, #1a237e,#2196f3)
+    background-image: linear-gradient(to bottom right, #1a237e, #2196f3)
 }
-body{
-    text-align: center;
-    font-family: Helvetica;
-    padding: 0px;
-    margin: 0px;
-    color: whitesmoke;
+
+.container {
+    background-color: none;
 }
-p{  
-    display: inline-block;
-    margin: 0;
+
+.controlContainer {
+
+    display: block;
 }
+
 button{
-    height: 20px;
     border: none;
-    background-color: whitesmoke;
-    padding: 0px 10px 0px 10px;
-    border-radius: 10px;
-}
-button:active{
-    background-color: gainsboro;
-}
-#passwordLength{
-    font-size: 12pt;
-    border: none;
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0);
-    width: 5ch;
-    border-bottom: 1px solid white;
-}
-#generatedPassword{
-    color: whitesmoke;
-    display: inline-block;
-}
-#generateControls .controlContainer{
-    width: 150px;
-    margin: 5px;
-}
-#upperBody p{
-    padding-bottom: 20px;
-}
-#passwordContainer{
-    text-align: center;
-    font-family: monospace;
-    font-weight: 10;
-    color:#212121;
-}
-#inputContainer{
-    padding: 40px 0px 40px 0px;
-}
-#inputContainerInner{
-    font-size: 13pt;
-    display: inline-block;
     padding: 10px;
-    height: 20px;
-    line-height: 20px;
+    border-radius: 30px;
 }
-label{
-    font-size: 12pt;
+.controlContainer input {
+    display: inline;
 }
-.controlContainer{
-    width: 120px;
-    text-align: left;
-    position: relative;
-    display: inline-block;
+
+.controlContainer label {
+    display: inline;
 }
-#generateControls{
-    padding-top: 20px;
-}
-#generateControls button{
-    width: 150px;
-    padding: 15px;
-    border-radius: 20px;
-    line-height: 0px;
-}
-.controlContainer .tooltiptext{
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    font-size: 10pt;
-    width: 120px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color:white;
-    text-align: center;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: -60px;
+
+.passwordOptions{
+    margin-top: 10px;
     margin-bottom: 10px;
 }
-.controlContainer:hover .tooltiptext{
-    visibility: visible;
-    opacity: 1;
+
+.passwordOptionsContainer{
+    margin-bottom: 50px;
 }
-.controlContainer .tooltiptext::after{
-  content: " ";
-  position: absolute;
-  top: 100%;  
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color:  rgba(255, 255, 255, 0.2) transparent transparent transparent;
+
+.passwordOptions input {
+    display: inline-block;
 }
-#footer{
+
+.passwordOptions label {
+    display: inline-block;
+}
+
+.passwordOptions p {
+    display: inline-block;
+}
+
+#footer {
     position: absolute;
-    width:100%;
+    width: 100%;
     left: 0;
     color: black;
     bottom: 0;
@@ -119,11 +57,14 @@ label{
     background-color: white;
     z-index: 2;
 }
-#footer a{
+
+#footer a {
+    text-align: center;
     text-decoration: none;
-    color:black;
+    color: black;
 }
-#toCopy{
+
+#toCopy {
     position: absolute;
     bottom: 0;
 }

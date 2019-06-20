@@ -1,8 +1,7 @@
 function generatePassword() {
     /* Sets the text size based on screen width and password length. */
     var passwordLength = document.getElementById("passwordLength").value;
-    var newFontSize = Math.floor((window.innerWidth / passwordLength));
-    document.getElementById("generatedPassword").style.fontSize = newFontSize + "pt";
+    
     /* Sets up the lists of available characters */
     var availableChars_Numeric = "0123456789";
     var availableChars_Special = '!"£$%^&*_+=-@~#';
