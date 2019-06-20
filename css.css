@@ -16,11 +16,7 @@ body{
     display: block;
 }
 
-button{
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-}
+
 .controlContainer input {
     display: inline;
 }
