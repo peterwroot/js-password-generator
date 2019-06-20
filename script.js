@@ -1,8 +1,6 @@
 function generatePassword() {
     /* Sets the text size based on screen width and password length. */
     var passwordLength = document.getElementById("passwordLength").value;
-    var newFontSize = Math.floor((window.innerWidth / (passwordLength * 2)));
-    document.getElementById("generatedPassword").style.fontSize = newFontSize + "pt";
     /* Sets up the lists of available characters */
     var availableChars_Numeric = "0123456789";
     var availableChars_Special = '!"£$%^&*_+=-@~#';
@@ -35,13 +33,12 @@ function generatePassword() {
     };
     /* Only shows the generated password if the user has enabled at least one character checkbox */
     if (availableCharacterList != "") {
-        document.getElementById("generatedPassword").innerHTML = generatedPassword;
+        document.getElementById("toCopy").value = generatedPassword;
     };
 }
 /* Copies the generated password to the user's clipboard. */
 function copyToClipboard() {
-    document.getElementById("toCopy").value = document.getElementById("generatedPassword").innerHTML;
-    var copyText = document.getElementById("toCopy");
+        var copyText = document.getElementById("toCopy");
     copyText.select();
     document.execCommand("copy");
 }
