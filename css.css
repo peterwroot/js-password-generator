@@ -85,6 +85,7 @@ button{
 }*/
 
 #toCopy{
+    border-radius: 0px;
     background-color: black;
     color: white;
     border: 2px solid white;
