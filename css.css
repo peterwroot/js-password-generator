@@ -1,14 +1,14 @@
 HTML {
     height: 100%;
-    position: fixed;
-
 }
 
 body {
+    width: 100%;
     background-color: black;
 }
 
 .container {
+
     padding: 20px;
     background-color: black;
     color: white;
@@ -16,23 +16,38 @@ body {
 }
 
 .controlContainer {
-
+     border-bottom: 2px solid white;
+    height 50px;
     display: block;
+
 }
 
 button {
     width: 100%;
     height: 50px;
     background-color: black;
-    border: 2px solid white;
     color: white;
+    border: none;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    margin-top: 10px;
 }
 
 .controlContainer input {
+    background-color: black;
+    text-align: right;
+    color: white;
+    border: none;
+    height: 25px;
+    margin: 5px;
     display: inline;
+    float: right;
 }
 
 .controlContainer label {
+    padding: 5px;
+    margin: 0px;
     display: inline;
 }
 
@@ -65,4 +80,12 @@ button {
     text-align: center;
     height: 50px;
     font-size: 1.5em;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
