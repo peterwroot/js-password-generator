@@ -14,23 +14,25 @@ body {
 }
 
 .controlContainer {
-    border-bottom: 2px solid black;
-    height 50px;
+    border-bottom: 2px dotted lightgray;
+    height 60px;
     display: block;
 
 }
 
 button {
+    border-radius: 25px;
     width: 100%;
     height: 50px;
-    background-color: white;
-    color: black;
+    background-image: linear-gradient(to bottom right,#03A9F4,#448AFF);
+    color: white;
+    font-weight: bold;
     border: none;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+
     margin-top: 10px;
 }
+
+
 
 .controlContainer input {
     background-color: white;
@@ -54,7 +56,10 @@ button {
     margin-bottom: 10px;
 }
 
-
+#passwordlength{
+    width: 45px;
+    
+}
 
 .passwordOptions input {
     display: inline-block;
@@ -69,10 +74,10 @@ button {
 }
 
 #toCopy {
-    border-radius: 0px;
+    border:none;
+    border-bottom: 2px dotted lightgray;
     background-color: white;
     color: black;
-    border: 2px solid black;
     margin-top: 20px;
     width: 100%;
     text-align: center;
