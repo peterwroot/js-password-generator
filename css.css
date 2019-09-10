@@ -7,8 +7,14 @@ body {
     background-color: white;
 }
 
+.passwordGeneratorContainer{
+
+    height: 100%;
+}
+
 .container {
-    padding-top: 20px;
+    vertical-align: middle;
+    padding: 15% 0;
     background-color: white;
     color: black;
 }
@@ -58,6 +64,7 @@ button {
 
 #passwordlength{
     width: 45px;
+    direction: rtl;
     
 }
 
