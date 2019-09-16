@@ -1,5 +1,5 @@
-## Simple JS Password Generator
+## JS Password Generator
 
-Can be used to generate random passwords up to 64 characters in length. 
+Easily generate strong random passwords. 
 
-An online version can be found [here](https://peter-wroot.github.io/js-password-generator/) 
+An online version can be found [here](https://password.wroot.xyz) 
