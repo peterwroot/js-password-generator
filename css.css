@@ -1,20 +1,31 @@
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */ 
+    
+    body {
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+}
+}
+
 HTML {
     height: 100%;
+    background-color: black;
 }
 
 body {
     width: 100%;
     background-color: white;
+
 }
 
 .passwordGeneratorContainer{
-
     height: 100%;
 }
 
 .container {
     vertical-align: middle;
-    padding: 15% 30px;;
+    padding: 100px 30px;
     background-color: white;
     color: black;
 }
