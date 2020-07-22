@@ -2,4 +2,4 @@
 
 Easily generate strong random passwords. 
 
-An online version can be found [here](https://password.wroot.xyz) 
+An online version can be found [here](https://peter-wroot.github.io/js-password-generator/) 
