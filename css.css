@@ -116,3 +116,9 @@ button {
     height: 50px;
     font-size: 1.5em;
 }
+
+
+#footerText{
+    color: black;
+    text-align: center;
+}
